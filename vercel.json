@@ -1,13 +1,13 @@
 {
-    "functions": {
-        "api/eyecon.php": {
-            "runtime": "vercel-community/php@0.7.3"
-        }
-    },
-    "rewrites": [
+    "headers": [
         {
-            "source": "/api/eyecon",
-            "destination": "/api/eyecon.php"
+            "source": "/api/(.*)",
+            "headers": [
+                {
+                    "key": "X-Powered-By",
+                    "value": "WASIF ALI"
+                }
+            ]
         }
     ]
 }
